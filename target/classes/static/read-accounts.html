@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Accounts</title>
+</head>
+<body>
+    <h1>Bank Accounts</h1>
+    <table border="2" width="70%" cellpadding="2">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Account No</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <!-- loop through the list of bank accounts and display them here -->
+        <c:forEach var="account" items="${accounts}">
+            <tr>
+                <td>${account.id}</td>
+                <td>${account.name}</td>
+                <td>${account.balance}</td>
+                <td>${account.accountNo}</td>
+                <td><button onclick="location.href='/update-account/${account.id}'">Update</button></td>
+                <td><button onclick="location.href='/delete-account/${account.id}'">Delete</button></td>
+            </tr>
+        </c:forEach>
+    </table>
+</body>
+</html>
