@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Bank Account</title>
+</head>
+<body>
+    <h1>Update Bank Account</h1>
+    <form method="post" action="/bank-accounts/update-account/${bankAccount.id}">
+        <label for="accountHolderName">Name:</label><br>
+        <input type="text" id="name" name="name" value="${bankAccount.accountHolderName}"><br>
+        <label for="balance">Balance:</label><br>
+        <input type="number" id="balance" name="balance" value="${bankAccount.balance}"><br>
+        <label for="accountNumber">Account No:</label><br>
+        <input type="text" id="accountNo" name="accountNo" value="${bankAccount.accountNumber}"><br>
+        <input type="submit" value="Update Account">
+    </form>
+</body>
+</html>
